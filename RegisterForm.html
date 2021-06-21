@@ -7,8 +7,9 @@
 <body bgcolor="lightblue">
 <h2 > Registration Form</h2>
 <div>
-<form>
+<form action="URL" method="Post" autocomplete="off">
 <pre>
+<input type="number" name="formId" value="50" hidden>
 <label >First Name:</label>
 <input type="text" name="first name">
 
@@ -19,7 +20,7 @@
 <input type="text" name="last name">
 
 <label >Email:</label>
-<input type="email" name="email">
+<input type="email" name="email" placeholder="enter valid email" autofocus>
 
 <label >USN:</label>
 <input type="text" name="usn">
@@ -38,12 +39,12 @@
 <input type="text" name="branch">
 
 <label>Gender:</label>
-<input type="radio" name="male">Male
-<input type="radio" name="female">Female
-<input type="radio" name="others">Others
+<input type="radio" value="male">Male
+<input type="radio" value="female" checked>Female
+<input type="radio" value="others">Others
 
 <label >PhoneNumber:</label>
-<input type="number" name="phoneNumber">
+<input type="number" name="phoneNumber" placeholder="Enter 10 digit no"  required="mobileno">
 
 <label >DOB:</label>
 <input type="date" name="dob">
@@ -54,13 +55,12 @@
 
 <label>Country:</label>
 <select>
-<option>Africa</option>
-<option>Brazil</option>
-<option>China</option>
-<option>India</option>
-<option>USA</option>
+<option value="Africa">Africa</option>
+<option value="Brazil">Brazil</option>
+<option value="China">China</option>
+<option value="India" selected>India </option>
+<option value="USA">USA</option>
 </select>
-
 <label >State:</label>
 <input type="text" name="state">
 
@@ -69,19 +69,36 @@
 
 
 <label>Programming Skills:</label>
-<input type="radio" name="java">Java
-<input type="radio" name="python">Python
-<input type="radio" name=".net">.Net
-<input type="radio" name=".c++">C++
-<input type="radio" name=".ruby">Ruby
+<input type="radio"  name="Programming Skills" value="java">Java
+<input type="radio"  name="Programming Skills" value="python">Python
+<input type="radio"  name="Programming Skills" value=".net">.Net
+<input type="radio"  name="Programming Skills" value=".c++">C++
+<input type="radio"  name="Programming Skills" value=".ruby">Ruby
 
 <label>Language:</label>
-<input type="radio" name="kannada">Kannada
-<input type="radio" name="english">English
-<input type="radio" name="telugu">Telugu
+<input type="radio" name="Language" value="Kannada">Kannada
+<input type="radio" name="Language" value="English">English
+<input type="radio" name="Language" value="Telugu">Telugu
 
-<label >Comments:</label>
-<input type="text" name="comments">
+<label>Pincode</label>
+<input type="number" name="number" value="562101" readonly disabled>
+
+
+<label>Password</label>
+<input type="password" name="password" minlength="4" maxlength="8">
+<label>Comments</label>
+<textarea rows="10" cols="30" name="comments"></textarea>
+
+<label>Rating</label>
+<input type="range" name="rating">
+
+<label>Search</label>
+<input type="search" name="search">
+
+<label>UploadFile</label>
+<input type="file" name="file">
+
+<input  type="submit" name="submit">
 
 </pre>
 </form>
